@@ -1,0 +1,10 @@
+{
+  "id": "simplepad",
+  "name": "simplepad",
+  "version": "1.1.0",
+  "minAppVersion": "1.4.0",
+  "description": "A disposable side-panel notepad. Toggle it open on any note, dump text in, close it. Plain text only, nothing is executed.",
+  "author": "Ry",
+  "authorUrl": "",
+  "isDesktopOnly": false
+}

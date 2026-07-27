@@ -1,0 +1,16 @@
+{
+  "pads": [
+    {
+      "name": "pad 1",
+      "content": ""
+    }
+  ],
+  "activePad": 0,
+  "wipeOnStartup": false,
+  "monospace": true,
+  "fontSize": 14,
+  "exportFolder": "",
+  "appendSeparator": "blank",
+  "timestampAppends": true,
+  "revealOnAppend": false
+}
