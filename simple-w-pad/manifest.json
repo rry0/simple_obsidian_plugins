@@ -1,0 +1,10 @@
+{
+  "id": "simple-w-board",
+  "name": "simple-w-board",
+  "version": "2.1.0",
+  "minAppVersion": "1.4.0",
+  "description": "Pop up a whiteboard over any note. Draw with colours, add text, select and move things, then drop it into the note at the cursor as an image. Open from the ribbon or the editor right-click menu.",
+  "author": "Ry",
+  "authorUrl": "",
+  "isDesktopOnly": false
+}
