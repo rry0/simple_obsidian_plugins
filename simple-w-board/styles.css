@@ -1,0 +1,319 @@
+.qs-modal {
+  width: min(960px, 93vw);
+  height: min(700px, 90vh);
+}
+
+.qs-modal .modal-content {
+  padding: 0;
+  height: 100%;
+}
+
+.qs-root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 0;
+}
+
+/* ---- title bar ---- */
+
+.qs-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px 8px;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.qs-title-label {
+  font-family: var(--font-monospace);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-accent);
+  opacity: 0.8;
+}
+
+.qs-title-input {
+  flex: 1;
+  padding: 2px 4px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-normal);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.qs-title-input:focus {
+  box-shadow: none;
+  border-bottom: 1px solid var(--text-accent);
+}
+
+.qs-title-input::placeholder {
+  color: var(--text-faint);
+  font-weight: 400;
+}
+
+/* ---- toolbar ---- */
+
+.qs-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.qs-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.qs-colors {
+  gap: 5px;
+}
+
+.qs-swatch {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 1px var(--background-modifier-border);
+  transition: transform 70ms ease;
+}
+
+.qs-swatch:hover {
+  transform: scale(1.15);
+}
+
+.qs-swatch-light {
+  box-shadow: 0 0 0 1px var(--background-modifier-border-hover);
+}
+
+.qs-swatch-on {
+  border-color: var(--interactive-accent);
+  transform: scale(1.15);
+}
+
+.qs-color-input {
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.qs-btn {
+  padding: 3px 10px;
+  font-size: 12px;
+  font-family: var(--font-interface);
+  cursor: pointer;
+  color: var(--text-muted);
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-s);
+  box-shadow: none;
+  transition: color 70ms ease, border-color 70ms ease, background-color 70ms ease;
+}
+
+.qs-btn:hover {
+  color: var(--text-normal);
+  border-color: var(--background-modifier-border-hover);
+}
+
+/* icon buttons for tools / history / sizes / bg */
+
+.qs-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 28px;
+  padding: 0;
+  cursor: pointer;
+  color: var(--text-muted);
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-s);
+  box-shadow: none;
+  transition: color 70ms ease, border-color 70ms ease, background-color 70ms ease;
+}
+
+.qs-icon-btn:hover {
+  color: var(--text-normal);
+  border-color: var(--background-modifier-border-hover);
+}
+
+.qs-icon-btn .svg-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.qs-on,
+.qs-on:hover {
+  color: var(--text-on-accent);
+  background: var(--interactive-accent);
+  border-color: var(--interactive-accent);
+}
+
+.qs-icon-danger:hover {
+  color: var(--text-error);
+  border-color: var(--text-error);
+}
+
+.qs-dot {
+  display: block;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.qs-bg-btn {
+  width: 34px;
+}
+
+.qs-bg-preview {
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px var(--background-modifier-border) inset;
+}
+
+.qs-bg-prev-white {
+  background: #ffffff;
+}
+
+.qs-bg-prev-black {
+  background: #000000;
+}
+
+.qs-bg-prev-transparent {
+  background-color: #fff;
+  background-image:
+    linear-gradient(45deg, #bbb 25%, transparent 25%),
+    linear-gradient(-45deg, #bbb 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #bbb 75%),
+    linear-gradient(-45deg, transparent 75%, #bbb 75%);
+  background-size: 8px 8px;
+  background-position: 0 0, 0 4px, 4px -4px, -4px 0;
+}
+
+.qs-divider {
+  width: 1px;
+  height: 22px;
+  background: var(--background-modifier-border);
+  margin: 0 2px;
+}
+
+.qs-disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* ---- canvas ---- */
+
+.qs-canvas-wrap {
+  flex: 1;
+  min-height: 0;
+  position: relative;
+  margin: 10px 12px;
+  border-radius: var(--radius-s);
+  overflow: hidden;
+  box-shadow: 0 0 0 1px var(--background-modifier-border);
+}
+
+.qs-bg-white {
+  background: #ffffff;
+}
+
+.qs-bg-black {
+  background: #000000;
+}
+
+.qs-bg-transparent {
+  background-color: var(--background-primary);
+  background-image:
+    linear-gradient(45deg, var(--background-secondary) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--background-secondary) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--background-secondary) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--background-secondary) 75%);
+  background-size: 18px 18px;
+  background-position: 0 0, 0 9px, 9px -9px, -9px 0;
+}
+
+.qs-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: crosshair;
+  touch-action: none;
+}
+
+.qs-canvas[data-tool="select"] {
+  cursor: default;
+}
+
+.qs-canvas[data-tool="text"] {
+  cursor: text;
+}
+
+/* ---- inline text editor ---- */
+
+.qs-text-input {
+  position: absolute;
+  z-index: 5;
+  min-width: 40px;
+  padding: 0 2px;
+  margin: 0;
+  line-height: 1.1;
+  background: transparent;
+  border: 1px dashed var(--interactive-accent);
+  border-radius: 2px;
+  box-shadow: none;
+  outline: none;
+}
+
+/* ---- primary actions ---- */
+
+.qs-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  padding: 10px 12px 12px;
+}
+
+.qs-actions .qs-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.qs-btn-icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+.qs-btn-icon .svg-icon {
+  width: 15px;
+  height: 15px;
+}
+
+.qs-btn-primary,
+.qs-btn-primary:hover {
+  color: var(--text-on-accent);
+  background: var(--interactive-accent);
+  border-color: var(--interactive-accent);
+  font-weight: 600;
+}
+
+.qs-btn-primary:hover {
+  background: var(--interactive-accent-hover);
+}
